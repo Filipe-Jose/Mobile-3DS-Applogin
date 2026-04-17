@@ -1,5 +1,6 @@
 package com.example.applogin.service
 
+import com.example.applogin.model.Login
 import com.example.applogin.model.Usuario
 import retrofit2.Call
 import retrofit2.http.Body
@@ -11,5 +12,10 @@ interface ApiService {
     fun cadastrarUsuario(
         @Body usuario : Usuario
     ) : Call<Usuario>
+
+    @POST ("/autenticar")
+    fun autenticar(
+        @Body login: Login
+    ) : Call<Boolean>
 
 }
