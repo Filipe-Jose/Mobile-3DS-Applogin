@@ -7,7 +7,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 
 object ApiClient {
 
-    private val URL = "http://172.24.113.169:8080/"
+    private val URL = "http://192.168.56.1:8080/"
 
     val instance : ApiService by lazy {
         val retrofit = Retrofit.Builder()
